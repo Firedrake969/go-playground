@@ -9,6 +9,12 @@ type Human struct {
     weight int
     age int
     metric bool
+    firstname string
+    lastname string
+}
+
+func (h Human) String() string {
+    return fmt.Sprintf("%s %s", h.firstname, h.lastname)
 }
 
 func (h Human) bmi() int {
@@ -25,8 +31,8 @@ func (h *Human) happybirthday() {
 }
 
 func main() {
-    somebody := &Human{1, 2, 3, false}
-    fmt.Println(somebody)
+    somebody := &Human{height: 1, weight: 2, age: 3, metric: false, firstname: "Abc", lastname: "Def"}
+    fmt.Println("somebody's name is %s.\n"somebody)
     fmt.Printf("somebody's age is %v.\n", somebody.age)
     somebodyage := &somebody.age
     fmt.Println("Happy birthday, somebody.")
