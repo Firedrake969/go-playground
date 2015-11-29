@@ -14,7 +14,7 @@ func main() {
     fmt.Printf("somenumber's literal value is %v.  pointynumber's literal value is %v.\n", somenumber, pointynumber)
     fmt.Printf("pointynumber's \"through\" value is %v.\n", *pointynumber)
     *pointynumber += 1
-    fmt.Printf("the numbers' new values are %v and %v.", somenumber, *pointynumber)
+    fmt.Printf("the numbers' new values are %v and %v.\n", somenumber, *pointynumber)
 
     fmt.Println("")
 
