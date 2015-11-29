@@ -32,7 +32,7 @@ func (h *Human) happybirthday() {
 
 func main() {
     somebody := &Human{height: 1, weight: 2, age: 3, metric: false, firstname: "Abc", lastname: "Def"}
-    fmt.Println("somebody's name is %s.\n"somebody)
+    fmt.Println("somebody's name is %s.\n", somebody)
     fmt.Printf("somebody's age is %v.\n", somebody.age)
     somebodyage := &somebody.age
     fmt.Println("Happy birthday, somebody.")
