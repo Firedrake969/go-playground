@@ -19,6 +19,11 @@ func (h Human) bmi() int {
     return (703 * h.weight / (h.height * h.height))
 }
 
+func (h *Human) happybirthday() {
+    // has to be pointer to change in main
+    h.age++
+}
+
 func main() {
     somebody := &Human{1, 2, 3, false}
     fmt.Println(somebody)
@@ -28,4 +33,7 @@ func main() {
     *somebodyage++
     fmt.Printf("somebody's age is now %v.\n", somebody.age)
     fmt.Printf("somebody's BMI is %v.\n", somebody.bmi())
+    fmt.Println("Happy birthday, somebody.")
+    somebody.happybirthday()
+    fmt.Printf("somebody's age is now %v.\n", somebody.age)
 }
